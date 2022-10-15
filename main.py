@@ -21,3 +21,7 @@ class Deck:
 
     def shuffle_deck(self):
         random.shuffle(self.deck)
+
+    def get_card(self):
+        card = self.deck.pop(0)
+        return card
