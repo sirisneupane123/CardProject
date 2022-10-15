@@ -26,14 +26,14 @@ class Deck:
         card = self.deck.pop(0)
         return card
 
-        def __str__(self):
-            return_string = ""
-            for card in self.deck:
-                return_string += card.__str__() + "-- "
-            return return_string
+    def __str__(self):
+        return_string = ""
+        for card in self.deck:
+            return_string += card.__str__() + "-- "
+        return return_string
 
-        def __repr__(self):
-            return self.deck
+    def __repr__(self):
+        return self.deck
 
 def create_deck():
     deck = [Card(suit, value) for value in
@@ -41,3 +41,13 @@ def create_deck():
             ['Hearts', 'Spades', 'Diamonds', 'Clubs']]
     random.shuffle(deck);
     return deck
+
+
+deck = Deck()
+deck.shuffle_deck()
+
+print(deck)
+
+print(deck.get_card())
+
+print(deck.get_card())
