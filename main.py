@@ -18,3 +18,6 @@ class Deck:
             for value in values:
                 card = Card(suit, value)
                 self.deck.append(card)
+
+    def shuffle_deck(self):
+        random.shuffle(self.deck)
